@@ -1,0 +1,148 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href=".\index.css">
+<script src=".\index.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+    <img src=".\image\logo.png" width="200px" height="100px"/>
+    </div>
+
+    <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn"><img src=".\image\search.png" width="30px" height="30px"/></button>
+      <div id="myDropdown" class="dropdown-content">
+        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+        <a href="#contact">Contact</a>
+        <a href="#support">Support</a>
+
+        <a href="#miami">Miami</a>
+        <a href="#california">California</a>
+        <a href="#location">Location</a>
+      </div>
+    </div>
+<!-- -------------------------------- LOGIN DROPBOX ----------------------------------------------  -->
+
+<div id='dropdownLogin'>
+	<ul>
+		  <li class='detailLogin'><a href='#'><span><img src=".\image\login.png" width="50px" height="50px"/></span></a>
+              
+              <form action="FormSubmit.php" method="post">
+                  <ul>
+                      <li><input type="text" placeholder="Username" id="user"></input></li>
+                      <li><input type="password" placeholder="Password" id="pass"></input></li>
+                      <li><input type="submit" value="Login" id="login"/><input type="button" value="Signup" id="signup" onclick="location.href = './signup.html';" /></li>
+                  </ul>
+            </form>
+	   </li>
+	</ul>
+</div>
+
+
+
+
+
+
+
+<!-- ------------------------------------------------------------------------------  -->
+
+
+    <div class="cart">
+      <img src=".\image\cart.png" width="60px" height="60px" />
+    </div>
+
+  </div>
+
+  <div>
+    <video autoplay muted loop id="myVideo">
+      <source src=".\video\homepage.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+  </div>
+
+<div class ="seperateBar1"></div>
+
+<div class="california">
+  <img src=".\image\california.jpg">
+</div>
+
+<div class ="seperateBar2"></div>
+
+<div class="miami">
+  <img src=".\image\miami.jpg">
+</div>
+
+<div class ="seperateBar2"></div>
+
+<div  class="aboutUs">
+  <h1> What is Real Slim</h1>
+  <p>The delicious range of Réal Slim shakes fuel you with the essential nutrients your body requires to be at its finest. The low calorie, high protein balance of all Réal Slim shakes also helps to fight excess fat, ensuring your body looks its best too.It’s this unique blend of whey protein, vitamins, minerals, fibres, and carbohydrates with taste and nutrition that makes Réal Slim a practical tool for weight management.</p>
+
+  <img src=".\image\whatisrealslim.png">
+
+</div>
+<div class ="seperateBar"></div>
+<!-- <div class="productCalifornia">
+	<table class="caliProduct" width="100%" border="1px">
+		<tr>
+			<td width="500px" height="400px">
+				<img src=".\image\california.jpg" width="500px" height="400px" id="calibox">
+			</td>
+
+			<td>
+				<div id="caliInfo">
+					<h1> California</h1>
+					<hr>
+					<p id="text">Friend Theory is a free online platform which allows you to stay with or host people <br>
+					you have mutual friends with. We offer free, friendly and trustworthy <br>
+					accommodation everywhere for everyone.
+
+					<p id="text">Did you know that for every 100 friends, you have 27,000 friends of friends? Your<br>
+					social network is way more powerful than you think!</p>
+					<p id="learnmore">Learn more >><button type="button" class="btn btn-danger" id="buynow">Buy now</button></p>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+-->
+<!--
+<div class="productMiami">
+<table class="caliProduct" width="100%" border="0px">
+		<tr>
+			<td width="500px" height="400px">
+				<img src=".\image\miami.jpg" width="500px" >
+			</td>
+
+			<td>
+				<div id="caliInfo">
+					<h1> Miami</h1>
+					<hr>
+					<p id="text">Friend Theory is a free online platform which allows you to stay with or host people <br>
+					you have mutual friends with. We offer free, friendly and trustworthy <br>
+					accommodation everywhere for everyone.
+
+					<p id="text">Did you know that for every 100 friends, you have 27,000 friends of friends? Your<br>
+					social network is way more powerful than you think!</p>
+
+					<button type="button" class="btn btn-danger" id="buynow">Buy now</button>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+-->
+
+</div>
+<div class="footer">
+  <p >Copyright © <img src=".\image\intelligence.png" width='200px' height='10px'> All Rights Reserved.</p>
+    
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,471 @@
+.productMiami{
+	margin-top: 50px;
+
+}
+#calibox{
+
+}
+/*DROP BOX-------------------------------------------------------------------------------*/
+.dropbtn {
+    background-color: black;
+    color: white;
+
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+		margin-top: 17px;
+		margin-left: 1250px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+
+}
+#aGotoSignUp{
+    width: 20%;
+}
+#myInput {
+    border-box: box-sizing;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+#dropdown li:hover ul {
+  display: block;
+}
+.dropdown {
+	flex:1;
+    position: relative;
+    display: inline-block;
+		z-index: 999;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+		flex:99999;
+		margin-left: 1200px;
+		margin-top: 20px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+		z-index: 999;
+		position: relative;
+}
+
+.dropdown a:hover {background-color: #ddd}
+
+.show {display:block;}
+/*END DROP BOX-------------------------------------------------------------------------------*/
+
+#dropdownLogin {
+  border: none;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  width: 960px;
+}
+
+#dropdownLogin ul {
+
+  height: 35px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#dropdownLogin li {
+  float: left;
+  padding: 0px;
+   margin-top: 10px;
+	 margin-left: 85px;
+}
+
+#dropdownLogin li a {
+
+  display: block;
+  font-weight: normal;
+  line-height: 35px;
+  margin: 0px;
+  padding: 0px 25px;
+  text-align: center;
+  text-decoration: none;
+	position:relative;
+	z-index: 9999999;
+}
+
+#dropdownLogin > ul > li > a {
+  color: #cccccc;
+}
+
+#dropdownLogin ul ul a {
+  color: #cccccc;
+}
+
+
+
+#dropdownLogin li ul {
+  background: transparent;
+  display: none;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  position: absolute;
+  width: 240px;
+  z-index: 200;
+margin-top: 10px;
+}
+
+#dropdownLogin li:hover ul {
+  display: block;
+}
+
+#dropdownLogin li li {
+  background: ;
+  display: block;
+  float: none;
+  margin: 0px;
+  padding: 0px;
+  width: '240px';
+}
+
+#dropdownLogin li:hover li a {
+  background: none;
+}
+
+#dropdownLogin li ul a {
+  display: block;
+  height: 35px;
+  font-size: 12px;
+  font-style: normal;
+  margin: 0px;
+  padding: 0px 10px 0px 15px;
+  text-align: left;
+}
+
+#dropdownLogin li ul a:hover, #dropdown li ul li:hover > a {
+  background: #8B3E2F;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#user{
+	width: 100%;
+    
+}
+#pass{
+	width: 100%;
+    margin-top: 5px;
+}
+#login{
+    width: 40%;
+    margin-left: 6.67%;
+     margin-top: 5px;
+}
+#signup{
+    width: 40%;
+    margin-left: 6.67%;
+     margin-top: 5px;
+}
+
+
+
+/*           End dropbox login                     */
+.footer{
+	height:40;
+	width:100%;
+	background-color: black;
+	align-content: center;
+}
+.footer p{
+	color: white;
+	text-align: center;
+
+}
+#caliInfo{
+	margin-left: 5%;
+	margin-right:;
+	margin-bottom:5%;
+}
+#text{
+	font-size:20px;
+
+}
+
+#buynow
+{
+	margin-top: 20px;
+	margin-left: 30px;
+	padding: 20px 48px;
+	font-size: 25px
+}
+#learnmore
+{
+	margin-left: 400px;
+	font-family:bold;
+	font-size: 20px;
+	color:blue;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+/*
+#myVideo {
+	overflow-y: hidden;
+    right: 0;
+    bottom: 0;
+    margin-top: 500px;
+    min-width: 100%;
+    
+    
+}
+*/
+
+#myVideo { 
+    position: relative;
+    margin-top: 600px;
+    left: 50%;
+    min-width: 100%;
+    
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.header{
+	background-color: black;
+	width: 100%;
+	height: 70px;
+	display:flex;
+ position: fixed;
+opacity: 0.9;
+}
+
+
+.logo{
+	margin-top: 6px;
+	margin-left:30;
+
+}
+.cart{
+	margin-top: 2px;
+	margin-left:0;
+
+}
+
+
+.seperateBar1{
+	position: relative;
+	background-color: black;
+	width: 100%;
+	height: 10px;
+	 z-index: -1;
+    margin-top: -540px;
+}
+.seperateBar2{
+	position: relative;
+	background-color: black;
+	width: 100%;
+	height: 10px;
+	 z-index: -1;
+    margin-top: 0px;
+}
+.california{
+	text-align: center;
+}
+.california img{
+	width:75%;
+	height: 97%;
+}
+.miami{
+	margin-left: 240px;
+}
+.miami img{
+	width:70%;
+	height: 94%;
+}
+.aboutUs img{
+	margin-left: 320px;
+width: 70%;
+height: 950px;
+opacity: 0.6;
+ z-index: -1;
+ position: relative;
+}
+.aboutUs h1{
+	text-align: center;
+}
+.aboutUs p{
+	position: relative;
+	font-size: 24px;
+	width: 60%;
+	text-align: center;
+	left: 400px;
+	top: 30px;;
+
+}
+
+/* ------------------------------------------------------------------------------*/
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  float: right;
+  background: #eee;
+  border-bottom: 1px solid #fff;
+  border-radius: 3px;
+}
+
+nav li {
+  float: left;
+}
+
+nav #login {
+  border-right: 1px solid #ddd;
+  box-shadow: 1px 0 0 #fff;
+}
+
+nav #login-trigger,
+nav #signup a {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  height: 25px;
+  line-height: 25px;
+  font-weight: bold;
+  padding: 0 8px;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 #fff;
+}
+
+nav #signup a {
+  border-radius: 0 3px 3px 0;
+}
+
+nav #login-trigger {
+  border-radius: 3px 0 0 3px;
+}
+
+nav #login-trigger:hover,
+nav #login .active,
+nav #signup a:hover {
+  background: #fff;
+}
+
+nav #login-content {
+  display: none;
+  position: absolute;
+  top: 24px;
+  right: 0;
+  z-index: 999;
+  background: #fff;
+  background-image: linear-gradient(top, #fff, #eee);
+  padding: 15px;
+  box-shadow: 0 2px 2px -1px rgba(0,0,0,.9);
+  border-radius: 3px 0 3px 3px;
+}
+
+nav li #login-content {
+  right: 0;
+  width: 250px;
+}
+
+/*--------------------*/
+
+#inputs input {
+  background: #f1f1f1;
+  padding: 6px 5px;
+  margin: 0 0 5px 0;
+  width: 238px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px #ccc inset;
+}
+
+#inputs input:focus {
+  background-color: #fff;
+  border-color: #e8c291;
+  outline: none;
+  box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+/*--------------------*/
+
+#login #actions {
+  margin: 10px 0 0 0;
+}
+
+#login #submit {
+  background-color: #d14545;
+  background-image: linear-gradient(top, #e97171, #d14545);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  border: 1px solid #7e1515;
+  float: left;
+  height: 30px;
+  padding: 0;
+  width: 100px;
+  cursor: pointer;
+  font: bold 14px Arial, Helvetica;
+  color: #fff;
+}
+
+#login #submit:hover,
+#login #submit:focus {
+  background-color: #e97171;
+  background-image: linear-gradient(top, #d14545, #e97171);
+}
+
+#login #submit:active {
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+}
+
+#login #submit::-moz-focus-inner {
+  border: none;
+}
+
+#login label {
+  float: right;
+  line-height: 30px;
+}
+
+#login label input {
+  position: relative;
+  top: 2px;
+  right: 2px;
+}

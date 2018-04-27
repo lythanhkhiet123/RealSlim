@@ -1,3 +1,12 @@
+/*Sign up form --------------------------------------------------------------------*/
+
+
+
+
+tr{
+    padding:0 15px 0 15px;
+}
+/*end signup form*/
 .productMiami{
 	margin-top: 50px;
 
@@ -185,7 +194,10 @@ margin-top: 10px;
     margin-left: 6.67%;
      margin-top: 5px;
 }
-
+#signupForm{
+    
+    
+}
 
 
 /*           End dropbox login                     */

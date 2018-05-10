@@ -1,0 +1,35 @@
+
+.headtitle{
+  text-align: center;
+  font-size: 40px;
+  color:#F2F2F2;
+}
+.title {
+  margin-top: 40px;
+  font-size: 30px;
+  color:#474747;
+
+}
+.buttonContainer {
+  margin-top: 40px;
+}
+
+
+.col-sm-4{
+left:160px;
+
+}
+
+
+.panel-default > .panel-heading {
+  background-color: black;
+  font-size: 22px;
+  text-align: center;
+
+}
+
+.headContainer {
+  background-color: black;
+  margin-bottom: 150px;
+  padding:40px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href=".\styles3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+  </style>
+
+
+
+</head>
+<body>
+
+  <header class="headContainer">
+    <h1 class="headtitle">CART</h1><br><br>
+  </header>
+
+<div class="container" >
+  <div class="row" >
+    <div class="col-sm-4" >
+      <div class="panel panel-default" >
+            <div class="panel-heading" style="background-image:none;background: #363636;color:#F2F2F2; text-align: center; font-size:20px; ">Name</div>
+
+          <div class="panel-body">
+            <ul id="itemListName">
+              <script>
+              var span = document.getElementById('itemListName');
+              var li = document.createElement('li');
+              var t = document.createTextNode('First item');
+              li.appendChild(t);
+              span.appendChild(li);
+                </script>
+            </ul>
+          </div>
+      </div>
+    </div>
+
+      <div class="col-sm-4" >
+        <div class="panel panel-default" >
+          <div class="panel-heading" style="background-image:none;background: #363636;color:#F2F2F2; text-align: center; font-size:20px; ">Price * Quantity</div>
+
+          <div class="panel-body">
+            <!-- Write something in the container  -->
+            <div id="result"></div>
+
+            <ul id="itemListPriceandQuantity">
+
+            </ul>
+            <script>
+            var span = document.getElementById('itemListPriceandQuantity');
+            var li = document.createElement('li');
+            var t = document.createTextNode('$20 * 3');
+            li.appendChild(t);
+            span.appendChild(li);
+              </script>
+
+        </div>
+
+        </div>
+
+      </div>
+      <div class="col-sm-4" >
+        <div class="panel panel-default" >
+          <div class="panel-heading" style="background-image:none;background: #363636;color:#F2F2F2; text-align: center; font-size:20px; ">Total</div>
+
+          <div class="panel-body">
+            <ul id="itemListTotal">
+              <script>
+              var span = document.getElementById('itemListTotal');
+              var li = document.createElement('li');
+              var t = document.createTextNode('$60');
+              li.appendChild(t);
+              span.appendChild(li);
+                </script>
+            </ul>
+
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+
+</body>
+</html>

@@ -35,7 +35,7 @@
         <div class="title pull-left" >$30</div>
           <div class="buttonContainer pull-right">
         <button type="button" class="button btn-lg" data-toggle="modal" data-target="#myModal" style="background-image:none;background: #363636;color:#F2F2F2;">More</button>
-        <button type="button" class="button btn-lg" onclick="location.href='./Cart.html';"style="background-image:none;background: #363636;color:#F2F2F2;">Buy</button>
+        <button type="button" class="button btn-lg" onclick="myFunction();"style="background-image:none;background: #363636;color:#F2F2F2;">Buy</button>
       </div>
       </div>
 
@@ -70,7 +70,7 @@
         <div class="title pull-left" >$30</div>
           <div class="buttonContainer pull-right">
         <button type="button" class="button btn-lg" data-toggle="modal" data-target="#myModal" style="background-image:none;background: #363636;color:#F2F2F2;">More</button>
-        <button type="button" class="button btn-lg" onclick="location.href='./Cart.html';" style="background-image:none;background: #363636;color:#F2F2F2;">Buy</button>
+        <button type="button" class="button btn-lg" onclick="myFunction2();" style="background-image:none;background: #363636;color:#F2F2F2;">Buy</button>
       </div>
       </div>
       </div>
@@ -86,7 +86,55 @@
         <div class="title pull-left" >$30</div>
           <div class="buttonContainer pull-right">
         <button type="button" class="button btn-lg" data-toggle="modal" data-target="#myModal" style="background-image:none;background: #363636;color:#F2F2F2;">More</button>
-        <button type="button" class="button btn-lg" onclick="location.href='./Cart.html';"style="background-image:none;background: #363636;color:#F2F2F2;">Buy</button>
+        <button type="button" class="button btn-lg" onclick="myFunction3();"style="background-image:none;background: #363636;color:#F2F2F2;">Buy</button>
+        <script>
+        var productName ='California Strawberry';
+
+        var productName2 ='California Chocolate';
+
+        var productName3 ='California Vanilla';
+          function myFunction3()
+          {
+            var quantity = prompt("How many do you want to buy?");
+            if (quantity != null) {
+                document.cookie = "productName="+productName2;
+                document.cookie = "quantity="+quantity;
+                document.cookie = "price= $30";
+
+                window.open("./Cart.html","_self");
+            }
+            else {
+              alert("please enter the quantity !!!!")
+            }
+          }
+          function myFunction2()
+          {
+            var quantity = prompt("How many do you want to buy?");
+            if (quantity != null) {
+                document.cookie = "productName="+productName2;
+                document.cookie = "quantity="+quantity;
+                document.cookie = "price= $30";
+                window.open("./Cart.html","_self");
+            }
+            else {
+              alert("please enter the quantity !!!!")
+            }
+          }
+          function myFunction()
+          {
+            var quantity = prompt("How many do you want to buy?");
+            if (quantity != null) {
+                document.cookie = "productName="+productName;
+                document.cookie = "quantity="+quantity;
+                document.cookie = "price= $30";
+
+                window.open("./Cart.html","_self");
+            }
+            else {
+              alert("please enter the quantity !!!!")
+            }
+          }
+        </script>
       </div>
       </div>
       </div>

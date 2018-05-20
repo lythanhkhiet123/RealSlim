@@ -11,6 +11,7 @@
     <div class="logo">
     <img src=".\image\logo.png" width="200px" height="100px"/>
     </div>
+    
 
     <div class="dropdown">
     <button onclick="myFunction()" class="dropbtn"><img src=".\image\search.png" width="30px" height="30px"/></button>
@@ -30,10 +31,10 @@
 	<ul>
 		  <li class='detailLogin'><a href='#'><span><img src=".\image\login.png" width="50px" height="50px"/></span></a>
 
-              <form action="FormSubmitSignin.php" method="post" >
+              <form action="https://5931.000webhostapp.com/get_user.php" method="post" >
                   <ul>
-                      <li><input type="text" placeholder="Username" id="user"></input></li>
-                      <li><input type="password" placeholder="Password" id="pass"></input></li>
+                      <li><input type="email" placeholder="Email" id="user" name="email" required></input></li>
+                      <li><input type="password" placeholder="Password" id="pass" name="psw" required pattern=".{6,}"></input></li>
                       <li><input type="submit" value="Login" id="login"/><input type="button" value="Signup" id="signup" onclick="document.getElementById('id01').style.display='block'" /></li>
                   </ul>
             </form>
@@ -46,7 +47,7 @@
 <!-- Signup Form------------------------------------------------------------------- -->
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form action="FormSubmitSignup.php" method="post" class="modal-content">
+  <form action="https://5931.000webhostapp.com/save_user.php" method="post" class="modal-content" id="formSignUp">
     <div class="container">
       <h1>Sign Up</h1>
       <p>Please fill in this form to create an account.</p>
@@ -56,29 +57,34 @@
                 <tr >
                     <td><label for="email"><b>Email</b></label>
                     </td>
-                    <td><input type="text" placeholder="Enter Email" name="email" required>
+                    <td><input type="email" placeholder="Enter Email" name="email" id="email" required >
                     </td>
                 </tr>
-
                 <tr>
                     <td><label for="psw"><b>Password</b></label>
                     </td>
-                    <td><input type="password" placeholder="Enter Password" name="psw" required>
+                    <td><input type="password" placeholder="Enter Password" name="psw" id="psw" required pattern=".{6,}"> Minimum 6 characters
                     </td>
                 </tr>
                 <tr>
                     <td><label for="psw-repeat"><b>Repeat Password</b></label>
                     </td>
-                    <td><input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                    <td><input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required pattern=".{6,}">
                     </td>
                 </tr>
-
-
-
-
+                <script>
+                  $('form').submit(function() {
+                    var username = $('#username').val();
+                    var password = $('#psw').val();
+                    var confirmPassword = $('#psw-repeat').val();
+                    if (password !== confirmPassword) {
+                      alert("Passwords do not match");
+                      return false;
+                    }
+                  });
+                </script>
             </table>
-
-      <br>
+        <br>
       <label>
         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
       </label>
@@ -145,57 +151,6 @@ window.onclick = function(event) {
 
 </div>
 <div class ="seperateBar"></div>
-<!-- <div class="productCalifornia">
-	<table class="caliProduct" width="100%" border="1px">
-		<tr>
-			<td width="500px" height="400px">
-				<img src=".\image\california.jpg" width="500px" height="400px" id="calibox">
-			</td>
-
-			<td>
-				<div id="caliInfo">
-					<h1> California</h1>
-					<hr>
-					<p id="text">Friend Theory is a free online platform which allows you to stay with or host people <br>
-					you have mutual friends with. We offer free, friendly and trustworthy <br>
-					accommodation everywhere for everyone.
-
-					<p id="text">Did you know that for every 100 friends, you have 27,000 friends of friends? Your<br>
-					social network is way more powerful than you think!</p>
-					<p id="learnmore">Learn more >><button type="button" class="btn btn-danger" id="buynow">Buy now</button></p>
-				</div>
-			</td>
-		</tr>
-	</table>
-</div>
--->
-<!--
-<div class="productMiami">
-<table class="caliProduct" width="100%" border="0px">
-		<tr>
-			<td width="500px" height="400px">
-				<img src=".\image\miami.jpg" width="500px" >
-			</td>
-
-			<td>
-				<div id="caliInfo">
-					<h1> Miami</h1>
-					<hr>
-					<p id="text">Friend Theory is a free online platform which allows you to stay with or host people <br>
-					you have mutual friends with. We offer free, friendly and trustworthy <br>
-					accommodation everywhere for everyone.
-
-					<p id="text">Did you know that for every 100 friends, you have 27,000 friends of friends? Your<br>
-					social network is way more powerful than you think!</p>
-
-					<button type="button" class="btn btn-danger" id="buynow">Buy now</button>
-				</div>
-			</td>
-		</tr>
-	</table>
-
--->
-
 </div>
 <div class="footer">
   <p >Copyright © <img src=".\image\intelligence.png" width='200px' height='10px'> All Rights Reserved.</p>

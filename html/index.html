@@ -1,21 +1,21 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href=".\index.css">
-<script src=".\index.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+<script src="../js/index.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
 
 </head>
 <body>
   <div class="header">
     <div class="logo">
-    <img src=".\image\logo.png" width="200px" height="100px"/>
+    <img src="..\image\logo.png" width="200px" height="100px"/>
     </div>
 
 
     <div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn"><img src=".\image\search.png" width="30px" height="30px"/></button>
+    <button onclick="myFunction()" class="dropbtn"><img src="..\image\search.png" width="30px" height="30px"/></button>
       <div id="myDropdown" class="dropdown-content">
         <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
 
@@ -28,25 +28,46 @@
 
 <div id='dropdownLogin'>
 	<ul>
-		  <li class='detailLogin'><a href='#'><span><img src=".\image\login.png" width="50px" height="50px"/></span></a>
+		  <li class='detailLogin'><a href='#'><span><img src="..\image\login.png" width="50px" height="50px"/></span></a>
 
-              <form action="https://5931.000webhostapp.com/get_user.php" method="post" >
-                  <ul>
+           <div id="listLogin">
+                  <ul >
                       <li><input type="email" placeholder="Email" id="user" name="email" required></input></li>
                       <li><input type="password" placeholder="Password" id="pass" name="psw" required pattern=".{6,}"></input></li>
-                      <li><input type="submit" value="Login" id="login"/><input type="button" value="Signup" id="signup" onclick="document.getElementById('id01').style.display='block'" /></li>
+                      <li><button id="login">Login</button>
+                        <input type="button" value="Signup" id="signup" onclick="document.getElementById('id01').style.display='block'" /></li>
                   </ul>
-            </form>
+            </div>
 	   </li>
 	</ul>
 </div>
-
-
+<script>
+    
+$('#login').click(function() {
+    var user = $('#user').val();
+    var pass = $('#pass').val();
+   
+    $.ajax({
+        type: "post", 
+        url: "https://5931.000webhostapp.com/get_user.php",
+        data : {user, pass},
+        success: function (data) {
+            
+            var myStorage = window.localStorage;
+            myStorage.setItem('userName', data);
+            window.location.href = "./afterLogin.html";
+        },
+        error: function (jqXHR, status, error) {
+            alert(jqXHR.responseText);
+        }
+    });
+});
+</script>
 
 <!-- Signup Form------------------------------------------------------------------- -->
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form action="https://5931.000webhostapp.com/save_user.php" method="post" class="modal-content" id="formSignUp">
+  <form action="" method="post" class="modal-content" id="formSignUp">
     <div class="container">
       <h1>Sign Up</h1>
       <p>Please fill in this form to create an account.</p>
@@ -71,17 +92,7 @@
                     <td><input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required pattern=".{6,}">
                     </td>
                 </tr>
-                <script>
-                  $('form').submit(function() {
-                    var username = $('#username').val();
-                    var password = $('#psw').val();
-                    var confirmPassword = $('#psw-repeat').val();
-                    if (password !== confirmPassword) {
-                      alert("Passwords do not match");
-                      return false;
-                    }
-                  });
-                </script>
+                
             </table>
         <br>
       <label>
@@ -92,10 +103,42 @@
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <input type="submit" value="Sign up" id="signupForm"/>
+        <input type="button" value="Sign up" id="signupForm" onclick="signup()"/>
       </div>
     </div>
+     
   </form>
+     <script>
+         function signup()
+         {
+             var user = $('#email').val();
+                    var password = $('#psw').val();
+                    var confirmPassword = $('#psw-repeat').val();
+                    if (password !== confirmPassword) {
+                      alert("Passwords do not match");
+                      
+                    }else{
+                         $.ajax({
+                        type: "post", 
+                        url: "https://5931.000webhostapp.com/save_user.php",
+                        data : {user, password},
+                        success: function (data, text, jqXHR) {
+                            alert(data);
+                        },
+                        error: function (jqXHR, status, error) {
+                            alert(jqXHR.responseText);
+                            
+                        }
+                    }
+                     
+                      
+
+                    });
+         }
+                
+                    
+                  
+                </script>
 </div>
 
 <script>
@@ -114,15 +157,17 @@ window.onclick = function(event) {
 <!-- ------------------------------------------------------------------------------  -->
 
 
+<!--
     <div class="cart">
-      <a href="./Cart.html"><img src=".\image\cart.png" width="60px" height="60px" /></a>
+      <a href="./Cart.html"><img src="..\image\cart.png" width="60px" height="60px" /></a>
     </div>
+-->
 
   </div>
 
   <div>
     <video autoplay muted loop id="myVideo">
-      <source src=".\video\homepage.mp4" type="video/mp4">
+      <source src="..\video\homepage.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
 
@@ -131,13 +176,13 @@ window.onclick = function(event) {
 <div class ="seperateBar1"></div>
 
 <div class="california">
-  <a href="./RealSlimProductCali.html"><img src=".\image\california.jpg"> </a>
+  <a href="./RealSlimProductCali.html"><img src="..\image\california.jpg"> </a>
 </div>
 
 <div class ="seperateBar2"></div>
 
 <div class="miami">
-    <a href="./RealSlimProductMiami.html"><img src=".\image\miami.jpg"> </a>
+    <a href="./RealSlimProductMiami.html"><img src="..\image\miami.jpg"> </a>
 </div>
 
 <div class ="seperateBar2"></div>
@@ -146,13 +191,13 @@ window.onclick = function(event) {
   <h1> What is Real Slim</h1>
   <p>The delicious range of Réal Slim shakes fuel you with the essential nutrients your body requires to be at its finest. The low calorie, high protein balance of all Réal Slim shakes also helps to fight excess fat, ensuring your body looks its best too.It’s this unique blend of whey protein, vitamins, minerals, fibres, and carbohydrates with taste and nutrition that makes Réal Slim a practical tool for weight management.</p>
 
-  <img src=".\image\whatisrealslim.png">
+  <img src="..\image\whatisrealslim.png">
 
 </div>
 <div class ="seperateBar"></div>
 </div>
 <div class="footer">
-  <p >Copyright © <img src=".\image\intelligence.png" width='200px' height='10px'> All Rights Reserved.</p>
+  <p >Copyright © <img src="..\image\intelligence.png" width='200px' height='10px'> All Rights Reserved.</p>
 
 </div>
 

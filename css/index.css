@@ -133,14 +133,15 @@ tr{
 #dropdownLogin li ul {
   background: transparent;
   display: none;
-  height: auto;
+ 
   padding: 0px;
   margin: 0px;
   border: 0px;
   position: absolute;
   width: 240px;
   z-index: 200;
-margin-top: 10px;
+margin-top: -20px;
+    height:200px;
 }
 
 #dropdownLogin li:hover ul {
@@ -175,7 +176,9 @@ margin-top: 10px;
   color: #ffffff;
   text-decoration: none;
 }
-
+#listLogin{
+    margin-top: 50px;
+}
 #user{
 	width: 100%;
 
